@@ -2,8 +2,8 @@ import { createStore, applyMiddleware } from 'redux'
 import logger from 'redux-logger'
 import createSagaMiddleware from 'redux-saga'
 
-import characterReducer from './character/character.reducer'
-import watcherSaga from './character/character.sagas'
+import characterReducer from './coffee/coffee.reducer'
+import watcherSaga from './coffee/coffee.sagas'
 
 
 const sagaMiddleware = createSagaMiddleware();

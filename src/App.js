@@ -2,16 +2,25 @@
 import { connect } from 'react-redux'
 import { useEffect } from 'react'
 
-import { apiCallRequest } from './redux/character/character.actions'
+import { apiCallRequest } from './redux/coffee/coffee.actions'
 
 function App({ fetching, characters, error, onRequest }) {
   useEffect(() => {
     onRequest()
   }, [onRequest])
-  console.log(characters);
+  // console.log(characters);
   return (
     <div>
-      <h1>It's work</h1>
+      <h1>Coffee</h1>
+      {
+        fetching ? (
+          <p>Loading...</p>
+        ) : (
+          characters.map(character => (
+            <li key={character.id}>{character.title}</li>
+          ))
+        )
+      }
 
     </div>
   );

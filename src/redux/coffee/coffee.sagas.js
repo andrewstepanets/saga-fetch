@@ -1,12 +1,12 @@
 import { takeLatest, call, put } from 'redux-saga/effects';
 import axios from 'axios'
 
-import { apiCallSuccess, apiCallFailure } from './character.actions'
+import { apiCallSuccess, apiCallFailure } from './coffee.actions'
 
 function fetchCharacters() {
   return axios({
     method: 'get',
-    url: 'https://api.sampleapis.com/futurama/characters'
+    url: 'https://api.sampleapis.com/coffee/hot'
   })
 }
 
