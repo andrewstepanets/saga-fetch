@@ -8,7 +8,7 @@ function App({ fetching, characters, error, onRequest }) {
   useEffect(() => {
     onRequest()
   }, [onRequest])
-  // console.log(characters);
+
   return (
     <div>
       <h1>Coffee</h1>
@@ -21,7 +21,9 @@ function App({ fetching, characters, error, onRequest }) {
           ))
         )
       }
-
+      {
+        error && <p>Something went wrong!!!</p>
+      }
     </div>
   );
 }
